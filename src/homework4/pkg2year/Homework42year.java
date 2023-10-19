@@ -26,8 +26,10 @@ public class Homework42year {
       
     ArrayList <User> userInfo = new ArrayList<>(); //Array to stock the information readed from the file
     ArrayList <String> members = new ArrayList<>();//stocks the name of the members to create the teams
-       
+    ArrayList<Teams> teams2 = new ArrayList<>();
     String[] teamNames = {"Barcelona", "Real Madri", "Machester", "Liverpool", "inter de milan", "Paris Saint German","AC milan","Benfica" ,"Arsenal", "Porto", "Celtic", "Borussia", "Atletico Madrid", "Napoli", "Copenhagen", "Sevilla", "Marseille", "Red Star belgrade", "Feyenoord", "RB Leipzig"};
+    
+    
     while (( line = br.readLine())!=null){
         String[] playerData = line.split(",");// splits each line into a array  separated by comas 
          System.out.println(playerData[0] + " " +  playerData[1]);
@@ -43,30 +45,29 @@ public class Homework42year {
         int teams =20;
         int teamSize=5;
         
-        int tName= 0;
-        for(int i =0;i< members.size(); i+=teamSize){
-            System.out.println("team :" + i/teamSize + " " + teamNames[i/teamSize]);
-            System.out.println();
-            tName= i/teamSize;
-            System.out.println(tName);
-           
-            for(int j =0; j<teamSize;j++){
+        
+        for(int i =0;i< members.size(); i+=teamSize){ // loops start from 0 untill fisish the list of members each time it run adds 5 to i
+            System.out.println("team :" + i/teamSize + " " + teamNames[i/teamSize]);// team name find by dividing the actual value of I per team size: 0/5 = team 0, next time the loop run  5/5 = 1 
             
-                
+           // teams2.add(new Teams(teamNames[i/teamSize], members.get(i+1),members.get(i+2),members.get(i+3),members.get(i+4),members.get(i+5)));
+            
+            teams2.add(new Teams(teamNames[i/teamSize], members.get(i), members.get(i+1), members.get(i+2), members.get(i+3), members.get(i+4)));
+            
+           // each time that the first loop run it must to run the second per 5 time, so that can run again
+            for(int j =0; j<teamSize;j++){ //another loop to run 5 time adding 1 to the variable j 
+            
+                // adding the actual value of  i to j with find 0+1, 0+2, 0+3, 0+4, 0+5, at the second group will be 5+1,5+2 and so one
                 System.out.println(members.get(i + j));}
+             
                
         
         }
+        System.out.println(teams2.get(2).TeamName + " " + teams2.get(2).player1 + " " + teams2.get(2).player2 + " " + teams2.get(2).player3 + " " + teams2.get(2).player4 + " " + teams2.get(2).player5);
+        
+        System.out.println(teams2.get(3).TeamName + " " + teams2.get(3).player1 + " " + teams2.get(3).player2 + " " + teams2.get(3).player3 + " " + teams2.get(3).player4 + " " + teams2.get(3).player5);
         
         
         
-        
-        
-//        System.out.println(userInfo.get(1).firstName );
-//        System.out.println(userInfo.get(1).ID );
-//        System.out.println(userInfo.get(4).email); 
-//        System.out.println(members.get(4));
-//        System.out.println(members.get(5));
-//        System.out.println(members.get(6));
+//        
 }
 }

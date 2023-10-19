@@ -24,18 +24,18 @@ public class Homework42year {
          BufferedReader br= new BufferedReader (new FileReader ("MOCK_DATA.csv")); // read from the file Fantasy futebool
        String line; 
     
-    ArrayList <User> playerInfo = new ArrayList<>(); //Array to stock the information readed from the file
+    ArrayList <User> playerInfo = new ArrayList<>(); //Arraylist to stock the information readed from the file as proterties of the object users
     ArrayList <String> members = new ArrayList<>();//stocks the name of the members to create the teams
     ArrayList<Teams> teams2 = new ArrayList<>();
     String[] teamNames = {"Barcelona", "Real Madri", "Machester", "Liverpool", "inter de milan", "Paris Saint German","AC milan","Benfica" ,"Arsenal", "Porto", "Celtic", "Borussia", "Atletico Madrid", "Napoli", "Copenhagen", "Sevilla", "Marseille", "Red Star belgrade", "Feyenoord", "RB Leipzig"};
     
       // Creating players to stock the data of each line of the file 
     while (( line = br.readLine())!=null){ //loop throw the file reading each line while has lines to read
-        String[] playerData = line.split(",");// splits each line into a array  separated by comas 
-         System.out.println(playerData[0] + " " +  playerData[1]);
-         User player = new User (Integer.parseInt(playerData[0]), playerData[1], playerData[2], playerData[3]); // creates a object player which the properties stock the data readed from the file.
+        String[] userData = line.split(",");// splits each line into a array  separated by comas 
+         System.out.println(userData[0] + " " +  userData[1]);
+         User player = new User (Integer.parseInt(userData[0]), userData[1], userData[2], userData[3]); // creates a object player which the properties stock the data readed from the file.
          playerInfo.add(player);
-         members.add(playerData[1]);// adds the name of each members that is in the 2 index of Array with the line splited    
+         members.add(userData[1]);// adds the name of each members that is in the 2 index of Array with the line splited    
     }
        
     

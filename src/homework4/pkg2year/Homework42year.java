@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- *
+ *  link for github https://github.com/Victor2022246/homework4-2year
  * @author victor pc
  */
 public class Homework42year {

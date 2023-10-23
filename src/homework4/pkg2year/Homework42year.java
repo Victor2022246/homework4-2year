@@ -63,6 +63,7 @@ public class Homework42year {
                
         
         }
+        //testing funcionality
         System.out.println(teams2.get(2).TeamName + " " + teams2.get(2).player1 + " " + teams2.get(2).player2 + " " + teams2.get(2).player3 + " " + teams2.get(2).player4 + " " + teams2.get(2).player5);
         
         System.out.println(teams2.get(3).TeamName + " " + teams2.get(3).player1 + " " + teams2.get(3).player2 + " " + teams2.get(3).player3 + " " + teams2.get(3).player4 + " " + teams2.get(3).player5);
